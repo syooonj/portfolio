@@ -1,0 +1,322 @@
+.container {
+  padding: 60px 20px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  // background-color: #090a0f;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  @include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    padding: 60px 20px;
+  }
+  @include mobile {
+    /*브라우저 사이즈767px이하일때*/
+    padding: 60px 20px;
+    // width: 100vw;
+    height: 100vh;
+  }
+  .main-area {
+    width: 100%;
+
+    .main-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      .main-title-01 {
+        font-size: 100px;
+        font-weight: 700;
+        @include tablet {
+          /*브라우저 사이즈767px이하일때*/
+          font-size: 60px;
+          margin-bottom: 20px;
+        }
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          font-size: 40px;
+          margin-bottom: 20px;
+        }
+      }
+      .main-title-02 {
+        font-size: 120px;
+        font-weight: 300;
+        @include tablet {
+          /*브라우저 사이즈767px이하일때*/
+          font-size: 75px;
+        }
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          font-size: 50px;
+        }
+      }
+      .main-title-03 {
+        margin-top: 60px;
+        color: white;
+        text-align: center;
+        height: 100px;
+        font-size: 40px;
+        line-height: 60px;
+        bottom: 60px;
+        @include tablet {
+          /*브라우저 사이즈767px이하일때*/
+          width: 330px;
+          height: 100px;
+          font-size: 20px;
+          line-height: 35px;
+        }
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          width: 260px;
+          height: 70px;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .blink {
+          animation: blink 0.5s infinite;
+          font-size: 2.5rem;
+          @include tablet {
+            /*브라우저 사이즈767px이하일때*/
+
+            font-size: 20px;
+          }
+          @include mobile {
+            /*브라우저 사이즈767px이하일때*/
+
+            font-size: 16px;
+          }
+        }
+
+        @keyframes blink {
+          to {
+            opacity: 0;
+          }
+        }
+      }
+      .mouse {
+        display: none;
+        @include tablet {
+          display: block;
+          position: absolute;
+          bottom: 10%;
+        }
+        @include mobile {
+          display: block;
+          position: absolute;
+          bottom: 10%;
+        }
+        .scroll-mouse {
+          width: 32px;
+          height: 56px;
+          border: 2px solid #fff;
+          border-radius: 24px;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          .scroll-mouse-point {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 6px;
+            background-color: #fff;
+            animation: mousemove 2s infinite;
+          }
+
+          @keyframes mousemove {
+            from {
+              top: 10px;
+              opacity: 0;
+            }
+            to {
+              top: 44px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .top-btn {
+      @include tablet {
+        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+        display: none;
+      }
+      @include mobile {
+        /*브라우저 사이즈767px이하일때*/
+        display: none;
+      }
+
+      .top-img {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        color: white;
+        font-size: 40px;
+        right: 60px;
+        bottom: 60px;
+        background-color: #2f66e5;
+        border-radius: 50%;
+        padding: 10px;
+        transform: rotate(180deg);
+        z-index: 1;
+        @include tablet {
+          /*브라우저 사이즈768px이상, 1023px 이하일때*/
+          width: 50px;
+          height: 50px;
+          right: 20px;
+          bottom: 20px;
+        }
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          width: 50px;
+          height: 50px;
+          right: 20px;
+          bottom: 20px;
+        }
+      }
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  .menu-area {
+    position: fixed;
+    height: 100vh;
+    left: 60px;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      /*브라우저 사이즈768px이상, 1023px 이하일때*/
+      display: none;
+      position: fixed;
+      left: 0;
+    }
+    @include mobile {
+      /*브라우저 사이즈767px이하일때*/
+      display: none;
+      // display: none;
+      position: fixed;
+      left: 0;
+    }
+
+    .menu-list-gruop {
+      font-size: 10px;
+      font-weight: 700;
+      @include tablet {
+        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        height: 80px;
+        background-color: black;
+        border-bottom: 1px solid white;
+      }
+      @include mobile {
+        /*브라우저 사이즈767px이하일때*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        height: 80px;
+        background-color: black;
+        border-bottom: 1px solid white;
+      }
+
+      .menu-list {
+        @include tablet {
+          /*브라우저 사이즈768px이상, 1023px 이하일때*/
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+        }
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+        }
+
+        .menu-item {
+          list-style: none;
+          @include mobile {
+            /*브라우저 사이즈767px이하일때*/
+            margin: 0 5px;
+          }
+          .menu-btn {
+            margin: 20px 0;
+            width: 130px;
+            height: 35px;
+            color: rgb(190, 190, 190);
+            border: 2px solid rgb(190, 190, 190);
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include tablet {
+              /*브라우저 사이즈768px이상, 1023px 이하일때*/
+              margin: 0 20px;
+              width: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            @include mobile {
+              /*브라우저 사이즈767px이하일때*/
+              margin: 0 10px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .menu-name {
+              color: rgb(190, 190, 190);
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                display: none;
+              }
+            }
+            .mo-menu-name {
+              display: none;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                display: block;
+                color: rgb(190, 190, 190);
+              }
+            }
+            &:hover {
+              .menu-name {
+                color: white;
+              }
+              .mo-menu-name {
+                color: white;
+              }
+
+              // opacity: 100%;
+              background-color: rgba(47, 102, 229, 0.85);
+              border: none;
+              transform: rotate(15deg);
+              transition: all 1s;
+            }
+            &.active {
+              .menu-name {
+                color: white;
+              }
+              background-color: rgba(47, 102, 229, 0.85);
+              border: none;
+              transform: rotate(15deg);
+              transition: all 1s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

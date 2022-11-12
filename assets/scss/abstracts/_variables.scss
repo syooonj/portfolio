@@ -1,0 +1,41 @@
+// // font
+// $font-default: "SBAggroL","SBAggroM", "SBAggroB","Noto Sans", sans-serif, "Noto Sans KR", sans-serif !important;
+// @font-face {
+//   font-family: "SBAggroL";
+//   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff")
+//     format("woff");
+//   font-weight: 300;
+// }
+
+// @font-face {
+//   font-family: "SBAggroM";
+//   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff")
+//     format("woff");
+//   font-weight: 500;
+// }
+
+// @font-face {
+//   font-family: "SBAggroB";
+//   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+//     format("woff");
+//   font-weight: 700;
+// }
+
+@font-face {
+  font-family: "SEBANG_Gothic_Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// // font
+$font-default: "SEBANG_Gothic_Regular", "SEBANG_Gothic_Bold" !important;

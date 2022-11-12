@@ -1,0 +1,26 @@
+.screen-out {
+  // display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*반응형 mixin으로 깔끔하게 사용하기*/
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1400px) {
+    @content;
+  }
+}
