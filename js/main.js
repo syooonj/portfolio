@@ -1,5 +1,5 @@
 const content =
-  "안녕하세요. \n 함께 변화하고 성장할 준비가 되어있는 신윤정입니다.";
+  "안녕하세요. \n 함께 변화하고 성장하는 웹디자이너 신윤정입니다.";
 const text = document.querySelector(".text");
 let i = 0;
 
